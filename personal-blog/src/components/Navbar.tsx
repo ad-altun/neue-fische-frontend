@@ -1,10 +1,10 @@
-import '../assets/images/image-avatar.jpg'
+import avatar from '../assets/images/image-avatar.jpg'
 
 export default function Navbar() {
     return (
         <div className="navbar">
             <div className={"navbar-profile"}>
-                <img src="../assets/images/image-avatar.jpg" alt="avatar"/>
+                <img src={avatar} alt="profile avatar" />
             </div>
             <div className="navbar-links">
                 <div>
