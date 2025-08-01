@@ -14,5 +14,6 @@
 // const numbersArrow = addNumbersArrow(num1, num2);
 // console.log("Add of " + num1 + " + " + num2 +" by the arrow function is also "+ numbersArrow);
 
-import './arrays.ts'
+// import './arrays.ts'
 
+import "./students";
