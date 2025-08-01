@@ -1,0 +1,41 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+    border: 1px solid blueviolet;
+    padding: 1rem;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.homepage {
+    margin: 1.5rem;
+}
+
+.post-image {
+    width: 30%;
+}
+
+.footer {
+    margin: 1rem .25rem;
+    display: flex;
+    gap: 1rem;
+}
