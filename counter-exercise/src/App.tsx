@@ -25,7 +25,7 @@ export default function App() {
     <>
       <div className="main">
         <div className="value">
-          {counter}
+          <h2>{counter}</h2>
         </div>
         <div className="buttons">
           <button className="button"
