@@ -1,10 +1,14 @@
 import avatar from '../assets/images/image-avatar.jpg'
+import { IoMenu } from "react-icons/io5";
 
 export default function Navbar() {
     return (
         <div className="navbar">
             <div className={"navbar-profile"}>
                 <img src={avatar} alt="profile avatar" />
+            </div>
+            <div className='menu-icon'>
+                <IoMenu />
             </div>
             <div className="navbar-links">
                 <div>
