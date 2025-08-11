@@ -12,7 +12,14 @@ export default function App() {
     }
   }
 
-
+  const handleDecrement = (): void => {
+    try {
+      setCounter(() => counter - 1);
+    } catch (error) {
+      console.log(error);
+      throw new Error("Function not implemented.");
+    }
+  }
 
   return (
     <>
@@ -21,10 +28,13 @@ export default function App() {
           {counter}
         </div>
         <div className="buttons">
-          <button className="increase"
+          <button className="button"
             onClick={handleIncrement}
           >Increment</button>
-
+          <button className="button"
+            onClick={handleDecrement}>
+            Decrement
+          </button>
         </div>
       </div>
     </>
