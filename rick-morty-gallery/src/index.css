@@ -41,6 +41,12 @@ body {
   padding-inline: 5rem;
 }
 
+.card p {
+  font-size: large;
+  font-style: oblique;
+  margin-top: -0.15rem;
+}
+
 .card img {
   border: 1px solid;
   border-radius: 50%;
@@ -51,7 +57,7 @@ body {
   gap: 2.75rem;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 3.75rem;
+  margin-block: 3.75rem;
 }
 
 .search-bar {

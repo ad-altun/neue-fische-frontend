@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import CharacterCards from "./components/CharacterCards"
 import type { Character, CharactersResponse } from "./types/types";
-import getRMCharacters from "./service/api";
+import { getRMCharacters } from "./service/api";
 import SearchBar from "./components/SearchBar";
 
 export default function App() {
