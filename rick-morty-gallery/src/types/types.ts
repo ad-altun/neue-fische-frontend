@@ -34,7 +34,6 @@ export interface CharactersResponse {
 }
 
 export interface CharacterPreview {
-  id: number;
   name: string;
   image: string;
 }
