@@ -1,4 +1,4 @@
-
+import type { CharacterPreview } from "../types/types"
 
 // alternative
 /*
@@ -13,19 +13,13 @@ const response: CharacterPreview[] = res.results.map((item) => ({
 setRMCharacters(response);
 */
 
-import type { CharacterPreview } from "../types/types"
-
-
 export default function CharacterCards({ name, image }: CharacterPreview) {
-
 
     return (
         <>
-            <main className="main">
-                <div>
-                    <p>{name}</p>
-                    <img src={image} alt="" />
-                </div>
+            <main className="card">
+                <p>{name}</p>
+                <img src={image} alt={name} />
             </main>
         </>
     )

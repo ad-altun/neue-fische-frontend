@@ -3,7 +3,6 @@ import CharacterCards from "./components/CharacterCards"
 import type { Character, CharactersResponse } from "./types/types";
 import getRMCharacters from "./service/api";
 import SearchBar from "./components/SearchBar";
-import Header from "./components/Header";
 
 export default function App() {
   const [rmCharacters, setRMCharacters] = useState<Character[]>([]);
@@ -51,25 +50,25 @@ export default function App() {
   console.log(Result.filteredRMCharacters)
 
   return (
-
-    <div>
-      <Header />
-      <SearchBar onChangeProb={Result.handleSearch} />
-      <div>
-        {Result.filteredRMCharacters.length !== 0 ?
-          <div>
-            {
-              Result.filteredRMCharacters && Result.filteredRMCharacters.map((char) => {
-                return (
-                  <div key={char.id}>
-                    <CharacterCards name={char.name} image={char.image} />
-                  </div>
-                )
-              })
-            }
-          </div>
-          : "Nothing found"}
-      </div>
-    </div>
+    <>
+      <main className="main-app">
+        <SearchBar onChangeProb={Result.handleSearch} />
+        <div >
+          {Result.filteredRMCharacters.length !== 0 ?
+            <div className="cards-main">
+              {
+                Result.filteredRMCharacters && Result.filteredRMCharacters.map((char) => {
+                  return (
+                    <div key={char.id} className="cards-loop">
+                      <CharacterCards name={char.name} image={char.image} />
+                    </div>
+                  )
+                })
+              }
+            </div>
+            : "Nothing found"}
+        </div>
+      </main>
+    </>
   )
 }

@@ -4,14 +4,18 @@ import './index.css'
 import App from './App.tsx'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import HomePage from './pages/HomePage.tsx'
+import Header from './components/Header.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/characters' element={<App />} />
-      </Routes>
+      <div className='main-browser'>
+        <Header />
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/characters' element={<App />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   </StrictMode>,
 )

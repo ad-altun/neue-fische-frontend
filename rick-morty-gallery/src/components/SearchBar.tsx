@@ -10,12 +10,16 @@ export default function SearchBar({ onChangeProb }: SearchBarProbs) {
     const handleChange = (term: string) => onChangeProb(term);
 
     return (
-        <div>
-            <FaSearch />
-            <h3>Search for character here: </h3>
-            <input type="text"
-                onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                    handleChange(e.target.value)} />
-        </div>
+        <>
+            <div className="search-bar">
+                <h3>Search for character here: </h3>
+                <div className='search'>
+                    <FaSearch className='search-icon' />
+                    <input type="text" className='search-input'
+                        onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                            handleChange(e.target.value)} />
+                </div>
+            </div>
+        </>
     )
 }
