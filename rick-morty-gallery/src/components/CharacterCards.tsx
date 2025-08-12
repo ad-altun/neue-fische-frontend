@@ -18,8 +18,8 @@ export default function CharacterCards({ name, image }: CharacterPreview) {
     return (
         <>
             <main className="card">
-                <p>{name}</p>
                 <img src={image} alt={name} />
+                <p>{name}</p>
             </main>
         </>
     )
