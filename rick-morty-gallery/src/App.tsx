@@ -3,6 +3,7 @@ import CharacterCards from "./components/CharacterCards"
 import type { Character, CharactersResponse } from "./types/types";
 import getRMCharacters from "./service/api";
 import SearchBar from "./components/SearchBar";
+import Header from "./components/Header";
 
 export default function App() {
   const [rmCharacters, setRMCharacters] = useState<Character[]>([]);
@@ -52,6 +53,7 @@ export default function App() {
   return (
 
     <div>
+      <Header />
       <SearchBar onChangeProb={Result.handleSearch} />
       <div>
         {Result.filteredRMCharacters.length !== 0 ?
